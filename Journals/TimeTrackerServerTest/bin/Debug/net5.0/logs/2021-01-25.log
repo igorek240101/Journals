@@ -1,0 +1,20 @@
+23:48:51 | INFO | Приложение запущено 
+23:49:56 | INFO | Приложение запущено 
+23:50:22 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.AccountController] 
+23:50:26 | INFO | Успешная регистрация пользователя Alex@example.com 
+23:50:45 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.AccountController] 
+23:50:45 | INFO | Успешная регистрация пользователя Boris@example.com 
+23:51:19 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.AccountController] 
+23:51:19 | INFO | Успешная регистрация пользователя Ciril@example.com 
+23:51:40 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.AccountController] 
+23:51:40 | INFO | Успешная регистрация пользователя Dima@example.com 
+23:52:00 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.AccountController] 
+23:52:00 | INFO | Успешная регистрация пользователя Egor@example.com 
+23:52:10 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.AccountController] 
+23:52:10 | INFO | Успешная регистрация пользователя Fedor@example.com 
+23:52:26 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.AccountController] 
+23:52:26 | INFO | Успешная регистрация пользователя Grisha@example.com 
+23:53:50 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.AccountController] 
+23:53:50 | INFO | Успешная регистрация пользователя Hristof@example.com 
+23:54:04 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.AccountController] 
+23:54:04 | INFO | Успешная регистрация пользователя Igor@example.com 

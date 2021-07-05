@@ -1,0 +1,49 @@
+18:07:00 | INFO | Приложение запущено 
+18:10:27 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.AccountController] 
+18:10:32 | INFO | Успешный вход пользователя с id 1 
+18:10:55 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.Statistics.ActivityController] 
+18:12:22 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.AccountController] 
+18:12:22 | INFO | Успешный вход пользователя с id 1 
+18:12:45 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.Statistics.ActivityController] 
+18:14:25 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.AccountController] 
+18:14:25 | INFO | Успешный вход пользователя с id 1 
+18:14:29 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.Statistics.ActivityController] 
+18:14:29 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.Statistics.ActivityController] 
+18:14:39 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.Statistics.ActivityController] 
+18:16:14 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.AccountController] 
+18:16:14 | INFO | Успешный вход пользователя с id 1 
+18:16:17 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.Statistics.ActivityController] 
+18:16:17 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.Statistics.ActivityController] 
+18:16:22 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.Statistics.ActivityController] 
+18:16:22 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.Statistics.ActivityController] 
+18:16:30 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.Statistics.ActivityController] 
+18:16:30 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.Statistics.ActivityController] 
+18:16:32 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.Statistics.ActivityController] 
+18:16:32 | WARN | Начато исследование 
+18:16:32 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.Statistics.ActivityController] 
+18:16:32 | WARN | Начато исследование 
+18:16:37 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.Statistics.ActivityController] 
+18:16:37 | WARN | Начато исследование 
+18:16:37 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.Statistics.ActivityController] 
+18:16:37 | WARN | Начато исследование 
+18:16:38 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.Statistics.ActivityController] 
+18:17:52 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.Statistics.ActivityController] 
+18:17:52 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.Statistics.ActivityController] 
+18:18:40 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.Statistics.ActivityController] 
+18:18:40 | WARN | Начато исследование 
+18:18:40 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.Statistics.ActivityController] 
+18:18:40 | WARN | Начато исследование 
+18:26:05 | INFO | Приложение запущено 
+18:26:19 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.AccountController] 
+18:26:23 | INFO | Успешный вход пользователя с id 1 
+18:26:25 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.Statistics.ActivityController] 
+18:26:25 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.Statistics.ActivityController] 
+18:26:28 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.Statistics.ActivityController] 
+18:26:28 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.Statistics.ActivityController] 
+18:26:38 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.Statistics.ActivityController] 
+18:26:38 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.Statistics.ActivityController] 
+18:27:11 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.Statistics.ActivityController] 
+18:27:11 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.Statistics.ActivityController] 
+18:28:32 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.Statistics.ActivityController] 
+18:28:32 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.Statistics.ActivityController] 
+19:37:27 | INFO | Приложение запущено 

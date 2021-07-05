@@ -1,0 +1,33 @@
+19:50:34 | INFO | Приложение запущено 
+19:51:13 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.AccountController] 
+19:51:17 | INFO | Неудачная регистрация ex@example.com (cлишком короткий пароль) 
+19:51:25 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.AccountController] 
+19:51:26 | INFO | Успешная регистрация пользователя ex@example.com 
+19:51:51 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.AccountController] 
+19:51:51 | INFO | Успешный вход пользователя с id 11 
+20:03:51 | INFO | Приложение запущено 
+20:04:17 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.AccountController] 
+20:04:20 | INFO | Успешный вход пользователя с id 11 
+20:09:26 | INFO | Приложение запущено 
+20:09:49 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.AccountController] 
+20:09:53 | INFO | Успешный вход пользователя с id 11 
+20:11:59 | INFO | Приложение запущено 
+20:12:23 | ERROR | An unhandled exception has occurred while executing the request. System.InvalidOperationException: Endpoint JournalsServer.Controllers.UserController.Login (TimeTrackerServerTest) contains authorization metadata, but a middleware was not found that supports authorization.
+Configure your application startup by adding app.UseAuthorization() inside the call to Configure(..) in the application startup code. The call to app.UseAuthorization() must appear between app.UseRouting() and app.UseEndpoints(...).
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.ThrowMissingAuthMiddlewareException(Endpoint endpoint)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.DefaultFilesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)    at Microsoft.AspNetCore.Routing.EndpointMiddleware.ThrowMissingAuthMiddlewareException(Endpoint endpoint)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.DefaultFilesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
