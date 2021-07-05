@@ -1,5 +1,0 @@
-10:47:58 | INFO | Приложение запущено 
-11:04:34 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.AccountController] 
-11:04:40 | INFO | Успешная регистрация пользователя igor@example.com 
-11:05:08 | WARN | Тип логгера: Microsoft.Extensions.Logging.Logger`1[TimeTrackerServerTest.Controllers.AccountController] 
-11:05:08 | INFO | Успешный вход пользователя с id 10 
