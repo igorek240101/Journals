@@ -26,7 +26,7 @@ namespace JournalsServer.Controllers
             if (ModelState.IsValid)
             {
                 SHA512Managed sha = new SHA512Managed();
-                string hash = System.Text.Encoding.UTF8.GetString(sha.ComputeHash(System.Text.Encoding.UTF8.GetBytes(login.Password)));
+                string hash = System.Text.Encoding.UTF8.GetString(sha.ComputeHash(Encoding.UTF8.GetBytes(login.Password)));
                 User user = await AppDbContext.db.Users.FirstOrDefaultAsync(u => u.Login == login.Login && u.Password == hash);
                 if (user != null)
                 {
@@ -40,12 +40,13 @@ namespace JournalsServer.Controllers
         [HttpGet]
         private ActionResult ResetToken()
         {
-            int Id =  isValidJWT(Request);
-            if (Id != -1)
+            ulong Id;
+            try
             {
-                return Ok(new { token = GenerateJWT(AppDbContext.db.Users.Find(Id)) });
+                Id = isValidJWT(Request);
             }
-            return Unauthorized();
+            catch { return Unauthorized(); }
+            return Ok(new {token = GenerateJWT(AppDbContext.db.Users.Find(Id))});
         }
 
         private string GenerateJWT(User user)
@@ -61,7 +62,7 @@ namespace JournalsServer.Controllers
         }
 
 
-        public static int isValidJWT(HttpRequest request)
+        public static ulong isValidJWT(HttpRequest request)
         {
             if (request.IsHttps)
             {
@@ -83,12 +84,12 @@ namespace JournalsServer.Controllers
                         validtoken = (new JwtSecurityTokenHandler()).ReadJwtToken(new JwtSecurityTokenHandler().WriteToken(validtoken));
                         if (token.Issuer == ServerInfo.Issuer && token.Audiences.First() == ServerInfo.Audience && token.RawSignature == validtoken.RawSignature && token.ValidTo < DateTime.Now)
                         {
-                            return Convert.ToInt32(token.Id);
+                            return Convert.ToUInt64(token.Id);
                         }
                     }
                 }
             }
-            return -1;
+            throw new Exception();
         }
 
 

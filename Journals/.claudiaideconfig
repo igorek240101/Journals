@@ -1,0 +1,22 @@
+﻿{
+  "BackgroundImageAbsolutePath": "C:\\Users\\Igor\\AppData\\Local\\Microsoft\\VisualStudio\\16.0_aacf57dd\\Extensions\\du2ak3f4.2fz\\Images\\ETU.png",
+  "BackgroundImagesDirectoryAbsolutePath": "C:\\USERS\\IGOR\\APPDATA\\LOCAL\\MICROSOFT\\VISUALSTUDIO\\16.0_AACF57DD\\EXTENSIONS\\DU2AK3F4.2FZ\\Images",
+  "ExpandToIDE": false,
+  "Extensions": ".png, .jpg, .gif, .bmp",
+  "ImageBackgroundType": 0,
+  "ImageFadeAnimationInterval": "PT0S",
+  "ImageStretch": 0,
+  "IsLimitToMainlyEditorWindow": false,
+  "LoopSlideshow": true,
+  "MaxHeight": 0,
+  "MaxWidth": 0,
+  "Opacity": 0.35,
+  "PositionHorizon": 1,
+  "PositionVertical": 1,
+  "ShuffleSlideshow": false,
+  "SoftEdgeX": 0,
+  "SoftEdgeY": 0,
+  "UpdateImageInterval": "PT1M",
+  "ViewBoxPointX": 0,
+  "ViewBoxPointY": 0
+}
