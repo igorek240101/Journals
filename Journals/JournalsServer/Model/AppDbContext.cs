@@ -8,6 +8,8 @@ namespace JournalsServer.Model
 
         public DbSet<User> Users { get; set; }
 
+        public DbSet<Department> Departments { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder
