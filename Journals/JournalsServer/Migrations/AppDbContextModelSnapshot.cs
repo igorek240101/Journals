@@ -32,7 +32,7 @@ namespace JournalsServer.Migrations
 
             modelBuilder.Entity("JournalsServer.Model.User", b =>
                 {
-                    b.Property<uint>("Id")
+                    b.Property<ulong>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
