@@ -1,0 +1,25 @@
+﻿<Window x:Class="JournalsClient.JournalsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JournalsClient"
+        mc:Ignorable="d"
+        Title="JournalsWindow" Height="700" Width="1100">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="700*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Background="LightBlue"/>
+        <TextBlock TextWrapping="Wrap" Margin="0,0,0,649"><Run Language="ru-ru" Text="Иванов Иван Иванович"/></TextBlock>
+        <Button Content="Список журналов" Margin="0,40,0,614" RenderTransformOrigin="-2.321,-3.389" Click="Button_Click"/>
+        <Button Content="Создание журнала" HorizontalAlignment="Center" Margin="0,75,0,0" VerticalAlignment="Top" Width="150" Height="30"/>
+
+
+
+    </Grid>
+</Window>

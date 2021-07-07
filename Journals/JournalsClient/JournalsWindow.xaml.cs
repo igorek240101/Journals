@@ -10,20 +10,23 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace JournalsClient
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Логика взаимодействия для JournalsWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class JournalsWindow : Window
     {
-        public MainWindow()
+        public JournalsWindow()
         {
             InitializeComponent();
-            AutorizationFrame.Content = new AutorizationPage();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -1625,25 +1625,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Igor\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\WearierPuma01\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub\\Journals\\Journals\\JournalsServer\\JournalsServer.csproj",
+      "projectUniqueName": "C:\\Users\\WearierPuma01\\Documents\\GitHub\\Journals\\Journals\\JournalsServer\\JournalsServer.csproj",
       "projectName": "JournalsServer",
-      "projectPath": "D:\\GitHub\\Journals\\Journals\\JournalsServer\\JournalsServer.csproj",
-      "packagesPath": "C:\\Users\\Igor\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub\\Journals\\Journals\\JournalsServer\\obj\\",
+      "projectPath": "C:\\Users\\WearierPuma01\\Documents\\GitHub\\Journals\\Journals\\JournalsServer\\JournalsServer.csproj",
+      "packagesPath": "C:\\Users\\WearierPuma01\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\WearierPuma01\\Documents\\GitHub\\Journals\\Journals\\JournalsServer\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Igor\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\WearierPuma01\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -1725,7 +1720,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }
