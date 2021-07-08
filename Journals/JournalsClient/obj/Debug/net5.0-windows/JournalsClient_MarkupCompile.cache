@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 D:\GitHub\Journals\Journals\JournalsClient\App.xaml
-11407045341
+4-1546425579
 
-3-1233169557
+6-996895296
 193-1891726104
-MainWindow.xaml;
+AutorizationPage.xaml;JournalsWindow.xaml;MainWindow.xaml;RegistrationPage.xaml;
 
 False
 

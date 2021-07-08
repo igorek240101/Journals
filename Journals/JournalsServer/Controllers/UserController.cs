@@ -43,7 +43,8 @@ namespace JournalsServer.Controllers
             if (ModelState.IsValid)
             {
                 User user = await AppDbContext.db.Users.FirstOrDefaultAsync(u => u.Login == model.Item1);
-                if (user == null)
+                Registration registration = await AppDbContext.db.Registrations.FirstOrDefaultAsync(u => u.Login == model.Item1);
+                if (user == null && registration == null)
                 {
                     if (model.Item2.Length < 4)
                     {
@@ -51,6 +52,8 @@ namespace JournalsServer.Controllers
                     }
                     SHA512Managed sha = new SHA512Managed();
                     string hash = System.Text.Encoding.UTF8.GetString(sha.ComputeHash(System.Text.Encoding.UTF8.GetBytes(model.Item2)));
+                    AppDbContext.db.Registrations.Add(new Registration { Login = model.Item1, Password = hash, Name = model.Item3});
+                    await AppDbContext.db.SaveChangesAsync();
                     return Ok();
                 }
                 else

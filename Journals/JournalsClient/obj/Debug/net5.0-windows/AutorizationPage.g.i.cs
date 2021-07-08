@@ -53,7 +53,7 @@ namespace JournalsClient {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/JournalsClient;V1.0.0.0;component/autorizationpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/JournalsClient;component/autorizationpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\AutorizationPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

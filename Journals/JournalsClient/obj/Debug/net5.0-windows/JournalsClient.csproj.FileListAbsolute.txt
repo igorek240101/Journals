@@ -20,3 +20,9 @@ D:\GitHub\Journals\Journals\JournalsClient\obj\Debug\net5.0-windows\JournalsClie
 D:\GitHub\Journals\Journals\JournalsClient\obj\Debug\net5.0-windows\ref\JournalsClient.dll
 D:\GitHub\Journals\Journals\JournalsClient\obj\Debug\net5.0-windows\JournalsClient.pdb
 D:\GitHub\Journals\Journals\JournalsClient\obj\Debug\net5.0-windows\JournalsClient.genruntimeconfig.cache
+D:\GitHub\Journals\Journals\JournalsClient\obj\Debug\net5.0-windows\AutorizationPage.g.cs
+D:\GitHub\Journals\Journals\JournalsClient\obj\Debug\net5.0-windows\JournalsWindow.g.cs
+D:\GitHub\Journals\Journals\JournalsClient\obj\Debug\net5.0-windows\RegistrationPage.g.cs
+D:\GitHub\Journals\Journals\JournalsClient\obj\Debug\net5.0-windows\AutorizationPage.baml
+D:\GitHub\Journals\Journals\JournalsClient\obj\Debug\net5.0-windows\JournalsWindow.baml
+D:\GitHub\Journals\Journals\JournalsClient\obj\Debug\net5.0-windows\RegistrationPage.baml

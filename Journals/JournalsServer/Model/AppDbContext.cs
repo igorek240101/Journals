@@ -10,6 +10,10 @@ namespace JournalsServer.Model
 
         public DbSet<Department> Departments { get; set; }
 
+        public DbSet<Registration> Registrations { get; set; }
+
+        public DbSet<JournalShablons> JournalShablons { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder

@@ -1,0 +1,8 @@
+﻿<!ELEMENT Table (Coloumn*)>
+<!ELEMENT Coloumn ((Formula?,Limit?)|Coloumn*)>
+<!ELEMENT Limit EMPTY>
+<!ELEMENT Formula (#PCDATA)>
+<!ATTLIST Coloumn Id ID #REQUIRED>
+<!ATTLIST Coloumn Name CDATA #REQUIRED>
+<!ATTLIST Limit Min CDATA #IMPLIED>
+<!ATTLIST Limit Max CDATA #IMPLIED>
