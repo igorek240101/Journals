@@ -1,11 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using JournalsServer.Model;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Security.Cryptography;
-using JournalsServer.Model;
-using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
+using System.IO;
 
 namespace JournalsServer.Controllers
 {
@@ -30,7 +32,7 @@ namespace JournalsServer.Controllers
                     User user = await AppDbContext.db.Users.FirstOrDefaultAsync(u => u.Login == model.Login);
                     if (user == null)
                     {
-                        if(AppDbContext.db.Departments.FirstOrDefault(u => u.Id == Math.Abs(model.Position)) == null
+                        if (AppDbContext.db.Departments.FirstOrDefault(u => u.Id == Math.Abs(model.Position)) == null
                             && model.Position != 0) return UnprocessableEntity("Такой отдел не зарегестрирован");
                         if (model.Position < 0 && AppDbContext.db.Users.FirstOrDefault(u => u.Position == model.Position) != null) return UnprocessableEntity("У этого отдела уже есть руководитель");
                         if (model.Password.Length < 4)
@@ -51,6 +53,47 @@ namespace JournalsServer.Controllers
             return Forbid();
         }
 
+        [Route("GetRegistration")]
+        [HttpGet]
+        public ActionResult<IEnumerable<object>> GetRegistration()
+        {
+            ulong Id;
+            try
+            {
+                Id = UserController.isValidJWT(Request);
+            }
+            catch { return Unauthorized(); }
+            if (Id > 0 && AppDbContext.db.Users.FirstOrDefault(u => u.Id == Id).Position == 0)
+            {
+                return AppDbContext.db.Registrations.ToList().ConvertAll(t => new { Id = t.Id, Name = t.Name });
+            }
+            return Forbid();
+        }
+
+        [Route("DeleteRegistration/{id}")]
+        [HttpDelete]
+        public async Task<ActionResult> DeketetRegistration(ulong id)
+        {
+            ulong Id;
+            try
+            {
+                Id = UserController.isValidJWT(Request);
+            }
+            catch { return Unauthorized(); }
+            if (Id > 0 && AppDbContext.db.Users.FirstOrDefault(u => u.Id == Id).Position == 0)
+            {
+                Registration registration = AppDbContext.db.Registrations.FirstOrDefault(t => t.Id == id);
+                if (registration != null)
+                {
+                    AppDbContext.db.Registrations.Remove(registration);
+                    await AppDbContext.db.SaveChangesAsync();
+                    return Ok();
+                }
+                return UnprocessableEntity();
+            }
+            return Forbid();
+        }
+
         [Route("GetWorkers")]
         [HttpGet]
         public ActionResult<IEnumerable<object>> GetWorkers()
@@ -63,7 +106,7 @@ namespace JournalsServer.Controllers
             catch { return Unauthorized(); }
             if (Id > 0 && AppDbContext.db.Users.FirstOrDefault(u => u.Id == Id).Position == 0)
             {
-                return AppDbContext.db.Users.ToList().ConvertAll(t=>new { login = t.Login, name = t.Name, Position = t.Position});
+                return AppDbContext.db.Users.ToList().ConvertAll(t => new { login = t.Login, name = t.Name, Position = t.Position });
             }
             return Forbid();
         }
@@ -121,7 +164,7 @@ namespace JournalsServer.Controllers
             catch { return Unauthorized(); }
             if (Id > 0 && AppDbContext.db.Users.FirstOrDefault(u => u.Id == Id).Position == 0)
             {
-                return AppDbContext.db.Departments.ToList().ConvertAll(t => new { login = t.Id, name = t.Name});
+                return AppDbContext.db.Departments.ToList().ConvertAll(t => new { login = t.Id, name = t.Name });
             }
             return Forbid();
         }
@@ -193,6 +236,93 @@ namespace JournalsServer.Controllers
                         ModelState.AddModelError("", "Некорректные логин");
                 }
                 return UnprocessableEntity();
+            }
+            return Forbid();
+        }
+
+        [Route("CreateShablon/{id}")]
+        [HttpPost]
+        public async Task<ActionResult> CreateShablon(sbyte id, IFormFile file)
+        {
+            ulong Id;
+            try
+            {
+                Id = UserController.isValidJWT(Request);
+            }
+            catch { return Unauthorized(); }
+            if (Id > 0 && AppDbContext.db.Users.FirstOrDefault(u => u.Id == Id).Position == 0)
+            {
+                using (var stream = System.IO.File.Create("Resource\\Shablons\\" + file.FileName))
+                {
+                    await file.CopyToAsync(stream);
+                }
+                Department department = AppDbContext.db.Departments.FirstOrDefault(t => t.Id == id);
+                if (department == null) return BadRequest("Такой отдел не найден");
+                AppDbContext.db.JournalShablons.Add(new JournalShablons { Name = file.FileName, Department = department });
+                await AppDbContext.db.SaveChangesAsync();
+                return Ok();
+            }
+            return Forbid();
+        }
+
+        [Route("GetShablons")]
+        [HttpGet]
+        public ActionResult<IEnumerable<JournalShablons>> GetShablons()
+        {
+
+            ulong Id;
+            try
+            {
+                Id = UserController.isValidJWT(Request);
+            }
+            catch { return Unauthorized(); }
+            if (Id > 0 && AppDbContext.db.Users.FirstOrDefault(u => u.Id == Id).Position == 0)
+            {
+                return AppDbContext.db.JournalShablons.ToList();
+            }
+            return Forbid();
+        }
+
+        [Route("GetShablon/{id}")]
+        [HttpGet]
+        public ActionResult<FileResult> GetShablon(ulong id)
+        {
+
+            ulong Id;
+            try
+            {
+                Id = UserController.isValidJWT(Request);
+            }
+            catch { return Unauthorized(); }
+            if (Id > 0 && AppDbContext.db.Users.FirstOrDefault(u => u.Id == Id).Position == 0)
+            {
+                JournalShablons shablons = AppDbContext.db.JournalShablons.FirstOrDefault(t => t.Id == id);
+                if (shablons == null) return BadRequest("Шаблон не найден");
+                FileStream file = new FileStream("Resource\\Shablons\\" + shablons.Name, FileMode.Open);
+                return Ok(File(file, "xml", shablons.Name));
+            }
+            return Forbid();
+        }
+
+        [Route("DeleteShablon/{id}")]
+        [HttpDelete]
+        public ActionResult DeleteShablon(ulong id)
+        {
+
+            ulong Id;
+            try
+            {
+                Id = UserController.isValidJWT(Request);
+            }
+            catch { return Unauthorized(); }
+            if (Id > 0 && AppDbContext.db.Users.FirstOrDefault(u => u.Id == Id).Position == 0)
+            {
+                JournalShablons shablons = AppDbContext.db.JournalShablons.FirstOrDefault(t => t.Id == id);
+                if (shablons == null) return BadRequest("Шаблон не найден");
+                System.IO.File.Delete("Resource\\Shablons\\" + shablons.Name);
+                AppDbContext.db.JournalShablons.Remove(shablons);
+                AppDbContext.db.SaveChanges();
+                return Ok();
             }
             return Forbid();
         }

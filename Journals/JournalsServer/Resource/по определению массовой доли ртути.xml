@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE Table SYSTEM "DTD.dtd">
+<Table>
+  <Coloumn Id="a1" Name="Масса ртути"></Coloumn>
+  <Coloumn Id="a2" Name="Объем ртути"></Coloumn>
+  <Coloumn Id="a3" Name="Результат">
+    <Coloumn Id="a4" Name="Плотность ртути">
+      <Formula>a1 a2 /</Formula>
+      <Limit Min="0"/>
+    </Coloumn>
+    <Coloumn Id="a5" Name="Разряженность ртути">
+      <Formula>a2 a1 /</Formula>
+      <Limit Min="1"/>
+    </Coloumn>
+  </Coloumn>
+</Table>

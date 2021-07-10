@@ -1,17 +1,17 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using JournalsServer.Model;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
-using System.Security.Cryptography;
-using JournalsServer.Model;
 using Microsoft.EntityFrameworkCore;
-using System.Security.Claims;
-using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
-using System.Text;
+using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.IO;
 using System.Linq;
-using System;
+using System.Security.Claims;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace JournalsServer.Controllers
 {
@@ -30,15 +30,42 @@ namespace JournalsServer.Controllers
                 User user = await AppDbContext.db.Users.FirstOrDefaultAsync(u => u.Login == login.Login && u.Password == hash);
                 if (user != null)
                 {
-                    return Ok(new { token = GenerateJWT(user)});
+                    return Ok(new { token = GenerateJWT(user) });
                 }
             }
             return UnprocessableEntity();
         }
 
+        [Route("Register")]
+        [HttpPost]
+        public async Task<IActionResult> Register((string, string, string) model)
+        {
+            if (ModelState.IsValid)
+            {
+                User user = await AppDbContext.db.Users.FirstOrDefaultAsync(u => u.Login == model.Item1);
+                Registration registration = await AppDbContext.db.Registrations.FirstOrDefaultAsync(u => u.Login == model.Item1);
+                if (user == null && registration == null)
+                {
+                    if (model.Item2.Length < 4)
+                    {
+                        return UnprocessableEntity("Слишком короткий пароль");
+                    }
+                    SHA512Managed sha = new SHA512Managed();
+                    string hash = System.Text.Encoding.UTF8.GetString(sha.ComputeHash(System.Text.Encoding.UTF8.GetBytes(model.Item2)));
+                    AppDbContext.db.Registrations.Add(new Registration { Login = model.Item1, Password = hash, Name = model.Item3});
+                    await AppDbContext.db.SaveChangesAsync();
+                    return Ok();
+                }
+                else
+                    return UnprocessableEntity("Логин уже занят");
+            }
+            return UnprocessableEntity();
+        }
+
+
         [Route("ResetToken")]
         [HttpGet]
-        private ActionResult ResetToken()
+        public ActionResult ResetToken()
         {
             ulong Id;
             try
@@ -46,7 +73,7 @@ namespace JournalsServer.Controllers
                 Id = isValidJWT(Request);
             }
             catch { return Unauthorized(); }
-            return Ok(new {token = GenerateJWT(AppDbContext.db.Users.Find(Id))});
+            return Ok(new { token = GenerateJWT(AppDbContext.db.Users.Find(Id)) });
         }
 
         private string GenerateJWT(User user)
