@@ -48,7 +48,7 @@ namespace JournalsClient
 
         private void JournalCreating_Click(object sender, RoutedEventArgs e)
         {
-            if (JournalLst == null)
+            if (TamplateChosing == null)
             {
                 TamplateChosing = new TamplateChosing_CJP_();
                 WorkFrame.Content = TamplateChosing;

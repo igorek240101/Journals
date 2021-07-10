@@ -61,7 +61,7 @@ namespace JournalsClient.Account {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/JournalsClient;V1.0.0.0;component/account/mainaccount.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/JournalsClient;component/account/mainaccount.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Account\MainAccount.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
