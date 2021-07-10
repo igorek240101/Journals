@@ -23,7 +23,7 @@ namespace JournalsClient
         public MainWindow()
         {
             InitializeComponent();
-            AutorizationFrame.Content = new AutorizationPage();
+            AutorizationFrame.Content = new AutorizationPage(this);
         }
     }
 }

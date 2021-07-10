@@ -7,7 +7,28 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Account\MainAccount.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="AutorizationPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CreatingJournalPages\AccessChosing[CJP].xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CreatingJournalPages\NameChosing[CJP].xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CreatingJournalPages\SuccessCreating[CJP].xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CreatingJournalPages\TamplateChosing[CJP].xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Department\DeparmentSettings.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="JournalsList.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="JournalsWindow.xaml.cs">
@@ -18,7 +39,28 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Account\MainAccount.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="AutorizationPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CreatingJournalPages\AccessChosing[CJP].xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CreatingJournalPages\NameChosing[CJP].xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CreatingJournalPages\SuccessCreating[CJP].xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CreatingJournalPages\TamplateChosing[CJP].xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Department\DeparmentSettings.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="JournalsList.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="JournalsWindow.xaml">

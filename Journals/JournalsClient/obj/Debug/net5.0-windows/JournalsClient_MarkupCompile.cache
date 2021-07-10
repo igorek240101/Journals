@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\GitHub\Journals\Journals\JournalsClient\obj\Debug\net5.0-windows\
+C:\Users\WearierPuma01\Documents\GitHub\Journals\Journals\JournalsClient\obj\Debug\net5.0-windows\
 JournalsClient
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
-D:\GitHub\Journals\Journals\JournalsClient\App.xaml
-11407045341
+C:\Users\WearierPuma01\Documents\GitHub\Journals\Journals\JournalsClient\App.xaml
+10523002822
 
-3-1233169557
+12-769898836
 193-1891726104
-MainWindow.xaml;
+Account\MainAccount.xaml;AutorizationPage.xaml;CreatingJournalPages\AccessChosing[CJP].xaml;CreatingJournalPages\NameChosing[CJP].xaml;CreatingJournalPages\SuccessCreating[CJP].xaml;CreatingJournalPages\TamplateChosing[CJP].xaml;JournalsList.xaml;JournalsWindow.xaml;MainWindow.xaml;RegistrationPage.xaml;
 
 False
 

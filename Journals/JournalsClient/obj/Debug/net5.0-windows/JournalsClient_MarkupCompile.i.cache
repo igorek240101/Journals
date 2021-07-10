@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 C:\Users\WearierPuma01\Documents\GitHub\Journals\Journals\JournalsClient\App.xaml
-4-1546425579
+11917754349
 
-8-1322998395
+15-1966878235
 193-1891726104
-AutorizationPage.xaml;JournalsWindow.xaml;MainWindow.xaml;RegistrationPage.xaml;
+Account\MainAccount.xaml;AutorizationPage.xaml;CreatingJournalPages\AccessChosing[CJP].xaml;CreatingJournalPages\NameChosing[CJP].xaml;CreatingJournalPages\SuccessCreating[CJP].xaml;CreatingJournalPages\TamplateChosing[CJP].xaml;Department\DeparmentSettings.xaml;JournalsList.xaml;JournalsWindow.xaml;MainWindow.xaml;RegistrationPage.xaml;
 
 False
 

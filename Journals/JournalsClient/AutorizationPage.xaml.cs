@@ -20,9 +20,13 @@ namespace JournalsClient
     /// </summary>
     public partial class AutorizationPage : Page
     {
-        public AutorizationPage()
+        private MainWindow startWindow;
+        private RegistrationPage RegisterPage;
+        public AutorizationPage(MainWindow mW)
         {
             InitializeComponent();
+            startWindow = mW;
+            
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -32,13 +36,23 @@ namespace JournalsClient
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new RegistrationPage());
+            if (RegisterPage == null)
+            {
+                RegisterPage = new RegistrationPage();
+                NavigationService.Navigate(RegisterPage);
+            }
+            else 
+            {
+                NavigationService.Navigate(RegisterPage);
+            }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             JournalsWindow journals = new JournalsWindow();
             journals.Show();
+            
+            startWindow.Close();
         }
     }
 }
